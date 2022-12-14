@@ -9,6 +9,10 @@ app = Flask(__name__)
 auth = HTTPBasicAuth()
 role = ''
 
+@app.route("/") 
+def welcome():
+    return('<h1>Welcome! We are group 7.</h1>')
+
 # GET
 @app.route("/<symbol>", methods=['GET'])
 @auth.login_required
