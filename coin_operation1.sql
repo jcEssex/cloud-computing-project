@@ -1,0 +1,38 @@
+SHOW DATABASES;
+use group7;
+show tables;
+create table coins(id VARCHAR(255) NOT NULL, symbol VARCHAR(255) NOT NULL);
+select * from coins;
+insert into coins (id, symbol) values ('bitcoin', 'BTC');
+insert into coins (id, symbol) values ('ethereum', 'ETH');
+insert into coins (id, symbol) values ('tether', 'USDT');
+insert into coins (id, symbol) values ('binance-coin', 'BNB');
+insert into coins (id, symbol) values ('usd-coin', 'USDC');
+insert into coins (id, symbol) values ('binance-usd', 'BUSD');
+insert into coins (id, symbol) values ('xrp', 'XRP');
+insert into coins (id, symbol) values ('dogecoin', 'DOGE');
+insert into coins (id, symbol) values ('cardano', 'ADA');
+insert into coins (id, symbol) values ('canadian-dollar', 'CAD');
+insert into coins (id, symbol) values ('polygon', 'MATIC');
+insert into coins (id, symbol) values ('polkadot', 'DOT');
+insert into coins (id, symbol) values ('multi-collateral-dai', 'DAI');
+insert into coins (id, symbol) values ('terra-luna', 'LUNA');
+insert into coins (id, symbol) values ('litecoin', 'LTC');
+insert into coins (id, symbol) values ('tron', 'TRX');
+insert into coins (id, symbol) values ('shiba-inu', 'SHIB');
+insert into coins (id, symbol) values ('solana', 'SOL');
+insert into coins (id, symbol) values ('uniswap', 'UNI');
+insert into coins (id, symbol) values ('avalanche', 'AVAX');
+insert into coins (id, symbol) values ('unus-sed-leo', 'LEO');
+insert into coins (id, symbol) values ('wrapped-bitcoin', 'WBTC');
+insert into coins (id, symbol) values ('chainlink', 'LINK');
+insert into coins (id, symbol) values ('monero', 'XMR');
+# remove unwanted entries after demostration
+select * from coins;
+SET SQL_SAFE_UPDATES = 0;
+delete from coins where symbol = 'BT';
+delete from coins where symbol = 'BC';
+delete from coins where symbol = 'EH';
+delete from coins where symbol = 'ET';
+SET SQL_SAFE_UPDATES = 1;
+
