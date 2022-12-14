@@ -93,7 +93,6 @@ def select_user(name):
     cursor = connection.cursor()
     query = "SELECT userID, pw, userRole FROM users WHERE userID like %s"
     cursor.execute(query, (name))
-    #records = cursor.fetchall() # (())
     account = cursor.fetchone()
     connection.close()
     return account
