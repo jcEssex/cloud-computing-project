@@ -34,11 +34,6 @@ def select_currency(symbol):
     else:
         return ''.join(full_name)
 
-if __name__ == '__main__':
-    insert_currency(id='british-pound-sterling', symbol = "GBP")
-    id, symbol = select_currency('GBP')
-    print(id, symbol)
-
 
 def delete_currency(symbol):
     connection = getConnection()
